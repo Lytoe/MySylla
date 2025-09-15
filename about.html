@@ -1,63 +1,68 @@
 <!doctype html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>About — Nima</title>
-    <link rel="icon" href="assets/nima.jpg" type="image/svg+xml">
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Lora:wght@400;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="main.js"></script>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>About — Nima</title>
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="main.js"></script>
 </head>
-
 <body>
-    <a class="skip-link" href="#main">Skip to content</a>
-    <div class="site">
-        <nav class="nav">
-            <div class="title-row">
-                <p class="site-title serif">Nima Taherkhani</p>
-                <button id="theme-toggle" class="button mono" aria-pressed="false">toggle theme</button>
-            </div>
-            <ul class="nav-links mono">
-                <li><a href="index.html">Home</a></li>
-                <li><a class="current-link" aria-current="page" href="about.html">About</a></li>
-                <li><a href="work.html">Work</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="site">
+    <nav class="nav">
+      <div class="title-row">
+        <p class="site-title serif">Nima Taherkhani</p>
+        <button id="theme-toggle" class="button mono" aria-pressed="false">toggle theme</button>
+      </div>
+      <ul class="nav-links mono">
+        <li><a href="index.html">Home</a></li>
+        <li><a class="current-link" aria-current="page" href="about.html">About</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
 
-        <main id="main">
-            <section class="text">
-                <h1 class="h1">About</h1>
-                <p>I’m a linguistics/NLP student in Paris. I build clean web interfaces and language tools. I value
-                    simple architecture, quick iteration, and legible UX.</p>
-                <p>Originally from Iran, I studied English Didactics for my bachelor’s degree and have years
-                    of experience teaching languages. This background shapes how I think about technology,
-                    learning, and communication.</p>
+    <main id="main">
+      <!-- WIDE two-column section -->
+      <section class="about-wide">
+        <div class="about-text text">
+          <h1 class="h1">About</h1>
 
-                <p>Today, I’m focused on computational linguistics and building AI-powered language learning
-                    tools. My main project is a large web app that integrates LLMs, TTS, and custom NLP pipelines.
-                    It’s already over 15k lines of code and follows Clean Architecture principles.</p>
+          <p>I’m a linguistics/NLP student in Paris. I build clean web interfaces and language tools. I value
+            simple architecture, quick iteration, and legible UX.</p>
 
-                <p>Outside of coding, I explore photography, French language learning, and writing.
-                    These keep me grounded and help me see technology as part of a broader creative life.</p>
-                <blockquote>
-                    <p>“Make it simple. Then make it obvious.”</p>
+          <p>Originally from Iran, I studied English Didactics for my bachelor’s degree and have years
+            of experience teaching languages. This background shapes how I think about technology,
+            learning, and communication.</p>
 
-                    <cite>— also my coding philosophy</cite>
-                </blockquote>
-            </section>
-        </main>
+          <p>Today, I’m focused on computational linguistics and building AI-powered language learning
+            tools. My main project is a large web app that integrates LLMs, TTS, and custom NLP pipelines.
+            It’s already over 15k lines of code and follows Clean Architecture principles.</p>
 
-        <footer class="footer">
-            <ul class="nav-links mono">
-                <li><a href="mailto:you@example.com">Email</a></li>
-                <li><a href="https://github.com/yourhandle" target="_blank" rel="noreferrer">GitHub</a></li>
-            </ul>
-        </footer>
-    </div>
+          <p>Outside of coding, I explore photography, French language learning, and writing.
+            These keep me grounded and help me see technology as part of a broader creative life.</p>
+
+          <blockquote>
+            <p>“Make it simple. Then make it obvious.”</p>
+            <cite>— also my coding philosophy</cite>
+          </blockquote>
+        </div>
+
+        <figure class="about-image">
+          <img src="assets/nima.jpg" alt="Portrait of Nima Taherkhani">
+          <figcaption>— Paris, 2025</figcaption>
+        </figure>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <ul class="nav-links mono">
+        <li><a href="mailto:you@example.com">Email</a></li>
+        <li><a href="https://github.com/yourhandle" target="_blank" rel="noreferrer">GitHub</a></li>
+      </ul>
+    </footer>
+  </div>
 </body>
-
 </html>

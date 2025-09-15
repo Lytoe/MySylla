@@ -206,3 +206,46 @@ cite {
     --ink-alt: #f8efda;
     color-scheme: dark;
 }
+/* About: text left (65ch), image pinned to right */
+.about-wide {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(220px, 320px);
+  align-items: start;
+  gap: 2rem;
+}
+
+.about-text {
+  max-width: var(--max);
+  justify-self: start;
+}
+
+.about-image {
+  margin: 0;
+  justify-self: end;       /* push to outer right */
+  text-align: center;
+}
+
+.about-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.about-image figcaption {
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--ink-alt);
+  margin-top: .5rem;
+}
+
+/* Stack on small screens */
+@media (max-width: 900px) {
+  .about-wide {
+    grid-template-columns: 1fr;
+  }
+  .about-image {
+    justify-self: center;
+    max-width: 320px;
+  }
+}
