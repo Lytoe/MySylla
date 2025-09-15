@@ -1,0 +1,208 @@
+:root {
+    --bg: #fff2d1;
+    --ink: #655a3d;
+    --ink-alt: #2b2618;
+    --radius: 4px;
+    --gap: clamp(.5rem, 3vw, 2rem);
+    --max: 65ch;
+    color-scheme: light;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: clamp(14px,
+            2.2vw, 18px);
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.7;
+}
+
+.serif,
+p,
+.text {
+    font-family: Lora, serif;
+}
+
+.mono,
+a,
+.button,
+nav {
+    font-family: "IBM Plex Mono", "Courier New", monospace;
+}
+
+.site {
+    padding: clamp(4px, 6vw, 4rem);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.site-title {
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+.h1,
+h1 {
+    font-size: 1.563rem;
+    line-height: 1.3;
+    margin: 0;
+}
+
+.text {
+    max-width: var(--max);
+    padding: 3rem 0 .8rem;
+}
+
+.text>*+* {
+    margin-top: 1rem;
+}
+
+.nav .title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+  list-style: none;
+  padding: 0;
+  margin: clamp(1rem, 3vw, 2rem) 0 0;
+  display: flex;           /* <- makes it horizontal */
+  flex-wrap: wrap;         /* allows wrapping on small screens */
+  gap: .8rem;              /* space between items */
+  align-items: center;
+}
+.nav-links li { margin: 0; } /* ensure no weird default spacing */
+
+
+/* Base link */
+.nav-links a {
+  text-decoration: none;
+  border-bottom: 1px dotted currentColor;
+  font-size: .9rem;
+  color: currentColor;
+}
+
+/* Active (current page) — supports class, aria-current, or class on <li> */
+.nav-links a:hover,
+.nav-links a.current-link,
+.nav-links a[aria-current="page"],
+.nav-links li.current-link > a {
+  background: var(--ink);
+  color: var(--bg);
+  border-bottom: none;
+  
+  border-radius: var(--radius);
+}
+
+/* Keep it visible when visited/focused */
+.nav-links a.current-link:visited,
+.nav-links a[aria-current="page"]:visited,
+.nav-links li.current-link > a:visited,
+.nav-links a.current-link:focus-visible,
+.nav-links a[aria-current="page"]:focus-visible,
+.nav-links li.current-link > a:focus-visible {
+  background: var(--ink);
+  color: var(--bg);
+  outline: 2px solid transparent; /* preserve contrast without extra ring */
+}
+
+.link {
+    font-style: italic;
+    border-bottom: 1px dotted currentColor;
+    
+}
+
+.button {
+    border: 0;
+    background: var(--ink);
+    color: var(--bg);
+    padding: .45rem .7rem;
+    border-radius: var(--radius);
+    cursor: pointer;
+}
+
+.work {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: .9rem;
+}
+
+.work th,
+.work td {
+    padding: .4rem;
+    vertical-align: top;
+}
+
+.work tr+tr {
+    border-top: 1px dotted var(--ink);
+}
+
+.work .year {
+    white-space: nowrap;
+    width: 5rem;
+    padding-right: 1rem;
+}
+
+.work .title {
+    white-space: nowrap;
+    padding-right: 1rem;
+}
+
+.work a {
+    border-bottom: 1px dotted currentColor;
+}
+
+blockquote {
+    border: 1px dotted var(--ink);
+    border-radius: var(--radius);
+    padding: 1rem;
+    margin: 0;
+}
+
+cite {
+    display: block;
+    margin-top: .5rem;
+    font-style: normal;
+    font-size: .85rem;
+}
+
+.footer {
+    margin-top: auto;
+}
+
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.skip-link:focus {
+    left: 1rem;
+    top: 1rem;
+    width: auto;
+    height: auto;
+    background: var(--ink);
+    color: var(--bg);
+    padding: .5rem;
+    border-radius: var(--radius);
+}
+
+/* Dark theme */
+:root[data-theme="dark"] {
+    --bg: #171512;
+    --ink: #f2e7c6;
+    --ink-alt: #f8efda;
+    color-scheme: dark;
+}

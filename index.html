@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Nima Taherkhani | Home</title>
+  <meta name="description" content="Nima — linguistics + NLP + developer. Selected work, services, and contact.">
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="main.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="site">
+    <nav class="nav">
+      <div class="title-row">
+        <p class="site-title serif">Nima Taherkhani</p>
+        <button id="theme-toggle" class="button mono" aria-pressed="false">toggle theme</button>
+      </div>
+      <ul class="nav-links mono">
+        <li><a href="index.html" aria-current="page" class="current-link">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <main id="main">
+      <section class="text">
+        <p>I’m Nima — linguistics/NLP student in Paris building language tools and clean, fast web apps.</p>
+        <p><a class="link" href="about.html">Read more about me</a></p>
+      </section>
+
+      <section class="text">
+        <h2 class="h1">Latest work</h2>
+        <table class="work" id="latest-work">
+          <thead>
+            <tr><th class="year">Year</th><th class="title">Title</th><th class="meta">Meta</th></tr>
+          </thead>
+          <tbody><!-- populated by main.js --></tbody>
+        </table>
+        <p><a class="link" href="work.html">View all work</a></p>
+      </section>
+
+      <section class="text">
+        <h2 class="h1">What I can help with</h2>
+        <ul class="list">
+          <li>French learning UX and NLP features (Clean Architecture, Next.js)</li>
+          <li>Static websites that load instantly</li>
+          <li>Prompt/LLM integrations (Gemini/OpenAI) with sanity checks</li>
+        </ul>
+        <p><a class="link" href="contact.html">Get in touch</a></p>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <ul class="nav-links mono">
+        <li><a href="mailto:you@example.com">Email</a></li>
+        <li><a href="https://github.com/yourhandle" target="_blank" rel="noreferrer">GitHub</a></li>
+        <li><a href="https://bsky.app/profile/yourname" target="_blank" rel="noreferrer">Bluesky</a></li>
+      </ul>
+    </footer>
+  </div>
+</body>
+</html>

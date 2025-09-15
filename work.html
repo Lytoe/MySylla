@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Work — Nima</title>
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="main.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="site">
+    <nav class="nav">
+      <div class="title-row">
+        <p class="site-title serif">Nima Taherkhani</p>
+        <button id="theme-toggle" class="button mono" aria-pressed="false">toggle theme</button>
+      </div>
+      <ul class="nav-links mono">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a class="current-link" aria-current="page" href="work.html">Work</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <main id="main">
+      <section class="text">
+        <h1 class="h1">Work</h1>
+        <table class="work" id="work-table">
+          <thead>
+            <tr><th class="year">Year</th><th class="title">Title</th><th class="meta">Meta</th></tr>
+          </thead>
+          <tbody><!-- main.js will inject rows from data/work.json --></tbody>
+        </table>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <ul class="nav-links mono">
+        <li><a href="mailto:you@example.com">Email</a></li>
+      </ul>
+    </footer>
+  </div>
+</body>
+</html>
