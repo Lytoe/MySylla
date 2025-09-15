@@ -1,15 +1,28 @@
-// Theme toggle (CSS variables, no gimmicks)
+// Theme toggle (CSS variables, multiple palettes)
 const btn = document.getElementById('theme-toggle');
 const root = document.documentElement;
-const saved = localStorage.getItem('theme');
-if (saved === 'dark') root.setAttribute('data-theme', 'dark');
 
+// Define available themes (must exist in styles.css)
+const themes = ["light", "dark", "blue", "green", "purple"];
+
+// Load saved theme if valid
+const saved = localStorage.getItem('theme');
+if (saved && themes.includes(saved)) {
+  root.setAttribute('data-theme', saved);
+}
+
+// Handle click → pick random theme (different from current)
 if (btn) {
   btn.addEventListener('click', () => {
-    const dark = root.getAttribute('data-theme') === 'dark';
-    root.setAttribute('data-theme', dark ? 'light' : 'dark');
-    localStorage.setItem('theme', dark ? 'light' : 'dark');
-    btn.setAttribute('aria-pressed', String(!dark));
+    const current = root.getAttribute('data-theme') || "light";
+    let next;
+    do {
+      next = themes[Math.floor(Math.random() * themes.length)];
+    } while (next === current);
+
+    root.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+    btn.setAttribute('aria-pressed', "true");
   });
 }
 

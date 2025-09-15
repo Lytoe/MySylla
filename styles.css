@@ -15,6 +15,7 @@
 html {
     font-size: clamp(14px,
             2.2vw, 18px);
+            transition: background-color 0.8s ease, color 0.8s ease;
 }
 
 body {
@@ -22,7 +23,13 @@ body {
     background: var(--bg);
     color: var(--ink);
     line-height: 1.7;
+    transition: background-color 0.8s ease, color 0.8s ease, border-color 0.8s ease;
 }
+.nav-links a,
+.button {
+  transition: background-color 0.8s ease, color 0.8s ease, border-color 0.8s ease;
+}
+
 
 .serif,
 p,
@@ -199,13 +206,7 @@ cite {
     border-radius: var(--radius);
 }
 
-/* Dark theme */
-:root[data-theme="dark"] {
-    --bg: #171512;
-    --ink: #f2e7c6;
-    --ink-alt: #f8efda;
-    color-scheme: dark;
-}
+
 /* About: text left (65ch), image pinned to right */
 .about-wide {
   display: grid;
@@ -248,4 +249,37 @@ cite {
     justify-self: center;
     max-width: 320px;
   }
+}
+
+:root[data-theme="light"] {
+  --bg: #fff2d1;
+  --ink: #655a3d;
+  --ink-alt: #2b2618;
+  color-scheme: light;
+}
+
+:root[data-theme="dark"] {
+  --bg: #171512;
+  --ink: #f2e7c6;
+  --ink-alt: #f8efda;
+  color-scheme: dark;
+}
+
+/* Extra random themes */
+:root[data-theme="blue"] {
+  --bg: #e7f0ff;
+  --ink: #1d3557;
+  --ink-alt: #457b9d;
+}
+
+:root[data-theme="green"] {
+  --bg: #f1faee;
+  --ink: #2d6a4f;
+  --ink-alt: #40916c;
+}
+
+:root[data-theme="purple"] {
+  --bg: #f8f0fc;
+  --ink: #5f0f40;
+  --ink-alt: #9d4edd;
 }
