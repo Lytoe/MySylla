@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Through My Eyes | Nima Taherkhani</title>
+  <meta name="description" content="Selected photographs by Nima — minimal, quiet frames.">
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="gallery/styles/gallery.css">
+  <script defer src="main.js"></script>
+  <script defer src="gallery/gallery.js"></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="site">
+    <!-- SAME NAV as index; mark current page -->
+    <nav class="nav">
+      <div class="title-row">
+        <p class="site-title serif">Nima Taherkhani</p>
+        <button id="theme-toggle" class="button mono" aria-pressed="false">toggle theme</button>
+      </div>
+      <ul class="nav-links mono">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="gallery.html" aria-current="page" class="current-link">Through My Eyes</a></li>
+      </ul>
+    </nav>
+
+    <main id="main" class="gallery">
+      <!-- Intro: text left, hero photo right -->
+      <section class="row split">
+        <div class="col text">
+          <p class="lede serif">
+            I shoot quiet moments, ideology contrast, and the space between. prefecture taught me restraint.
+            These are the frames I keep.
+          </p>
+        </div>
+        <figure class="col media">
+          <picture>
+            <source srcset="assets/gallery/anisa1.webp" type="image/webp">
+            <img src="assets/gallery/anisa1.jpg" alt="Best shot description" loading="lazy" decoding="async">
+          </picture>
+          <figcaption class="caption mono">Paris, 2025 — Anisa</figcaption>
+        </figure>
+      </section>
+
+      <!-- Alt #1: photo left, text right -->
+      <section class="row split">
+        <div class="col text">
+          <p class="mono small">Edges matter. I shoot when the city is between moods.</p>
+        </div>
+        <figure class="col media">
+          <picture>
+            <source srcset="assets/gallery/bridge.webp" type="image/webp">
+            <img src="assets/gallery/bridge.jpg" alt="Bridge shadow" loading="lazy" decoding="async">
+          </picture>
+          <figcaption class="caption mono">pont de je sais pas — 17:32</figcaption>
+        </figure>
+      </section>
+
+      <!-- Centered feature with side notes -->
+      <section class="row centered">
+        <aside class="note mono small">open your diafragma not your legs</aside>
+        <figure class="center-media">
+          <picture>
+            <source srcset="assets/gallery/she1.webp" type="image/webp">
+            <img src="assets/gallery/she1.jpg" alt="Stairwell light" loading="lazy" decoding="async">
+          </picture>
+          <figcaption class="caption mono">Fargol — pont neuf </figcaption>
+        </figure>
+        <aside class="note mono small">hairs, vessels, neurons — ISO 400, 1/125</aside>
+      </section>
+
+      <!-- Alt #2: text left, photo right -->
+      <section class="row split">
+        <div class="col text">
+          <p class="mono small">Faces are private. I keep distance and let the light speak.</p>
+        </div>
+        <figure class="col media">
+          <picture>
+            <source srcset="assets/gallery/mag1.webp" type="image/webp">
+            <img src="assets/gallery/mag1.jpg" alt="Window reflection" loading="lazy" decoding="async">
+          </picture>
+          <figcaption class="caption mono">mag or better  "chen hong ying"</figcaption>
+        </figure>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <ul class="nav-links mono">
+        <li><a href="mailto:n.taherkhani1378@gmail.com">Email</a></li>
+        <li><a href="https://github.com/Lytoe" target="_blank" rel="noreferrer noopener">GitHub</a></li>
+      </ul>
+    </footer>
+
+    <section class="kofi-wrap">
+      <a href="https://ko-fi.com/nimataherkhani" class="kofi-button" target="_blank" rel="noreferrer noopener">
+        <img class="kofi-cup" src="assets/kofi_symbol.png" alt="Ko-fi" width="22" height="15">
+        Buy me a coffee
+      </a>
+    </section>
+  </div>
+
+  <!-- Monter -->
+  <button id="to-top" class="to-top mono" aria-label="Monter en haut">↑</button>
+</body>
+</html>
