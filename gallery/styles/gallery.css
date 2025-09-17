@@ -107,3 +107,27 @@
       "note-right";
   }
 }
+.media img,
+.center-media img {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-1);
+}
+.media {
+  background: var(--surface);
+  padding: 6px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-2);
+}
+.media img {
+  display: block;
+  width: 100%;
+  border-radius: calc(var(--radius) - 4px);
+}
+.caption {
+  margin-top: 4px;
+  text-align: center;
+  font-size: 0.8rem;
+}
+

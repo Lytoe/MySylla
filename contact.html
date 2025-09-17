@@ -1,13 +1,17 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Contact — Nima</title>
   <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Lora:wght@400;700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script defer src="main.js"></script>
 </head>
+
 <body class="page-contact">
   <a class="skip-link" href="#main">Skip to content</a>
 
@@ -32,12 +36,28 @@
         <p class="muted">Feel free to drop me an email or find me via the links below.(some of em are active)</p>
       </section>
 
-      <section class="contact-list">
-        <a class="contact-cta" href="mailto:n.taherkhani1378@gmail.com">Email</a>
-        <a class="contact-cta" href="https://instagram.com/" target="_blank" rel="noreferrer noopener">Instagram</a>
-        <a class="contact-cta" href="https://bsky.app/profile/" target="_blank" rel="noreferrer noopener">Bluesky</a>
-        <a class="contact-cta" href="https://www.threads.net/" target="_blank" rel="noreferrer noopener">Threads</a>
-        <a class="contact-cta" href="https://linktr.ee/" target="_blank" rel="noreferrer noopener">Linktree</a>
+      <section class="contact-row">
+        <div class="contact-list">
+          <a class="contact-cta" href="mailto:n.taherkhani1378@gmail.com">Email</a>
+          <a class="contact-cta" href="https://instagram.com/" target="_blank" rel="noreferrer noopener">Instagram</a>
+          <a class="contact-cta" href="https://bsky.app/profile/mysylla.bsky.social/" target="_blank"
+            rel="noreferrer noopener">Bluesky</a>
+          <a class="contact-cta" href="https://www.threads.net/" target="_blank" rel="noreferrer noopener">Threads</a>
+          <a class="contact-cta" href="https://linktr.ee/" target="_blank" rel="noreferrer noopener">Linktree</a>
+        </div>
+
+        <div class="contact-form">
+          <h2 class="h2">Or send me a message</h2>
+          <form name="contact" method="POST" data-netlify="true">
+            <input type="hidden" name="form-name" value="contact">
+
+            <p><label>Name<br><input type="text" name="name" required></label></p>
+            <p><label>Email<br><input type="email" name="email" required></label></p>
+            <p><label>Subject<br><input type="text" name="subject" required></label></p>
+            <p><label>Message<br><textarea name="message" rows="6" required></textarea></label></p>
+            <p><button type="submit" class="button mono">Send</button></p>
+          </form>
+        </div>
       </section>
 
       <section class="kofi-wrap">
@@ -51,10 +71,10 @@
     <footer class="footer">
       <ul class="mini-links mono">
         <li><a href="https://instagram.com/" target="_blank" rel="noreferrer noopener">Instagram</a></li>
-        <li><a href="https://bsky.app/profile/" target="_blank" rel="noreferrer noopener">Bluesky</a></li>
-        <li><a href="https://substack.com/" target="_blank" rel="noreferrer noopener">Substack</a></li>
+        <li><a href="https://bsky.app/profile/mysylla.bsky.social" target="_blank" rel="noreferrer noopener">Bluesky</a></li>
       </ul>
     </footer>
   </div>
 </body>
+
 </html>

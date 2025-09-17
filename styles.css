@@ -49,7 +49,7 @@
   color-scheme: dark;
 }
 
-/* EXTRA THEMES (fully defined to prevent contrast drift) */
+/* EXTRA THEMES */
 :root[data-theme="blue"] {
   --bg: #eaf2ff;
   --fg: #17243a;
@@ -59,6 +59,39 @@
   --link: #17243a;
   --accent: #2c405f;
   --on-accent: #eaf2ff;
+}
+
+:root[data-theme="red"] {
+  --bg: #fff0f0;
+  --fg: #3a1111;
+  --fg-muted: #6a2a2a;
+  --surface: #fff6f6;
+  --border: #e5c0c0;
+  --link: #3a1111;
+  --accent: #b23434;
+  --on-accent: #fff0f0;
+}
+
+:root[data-theme="orange"] {
+  --bg: #fff4e8;
+  --fg: #2e1b0f;
+  --fg-muted: #664632;
+  --surface: #fff9f2;
+  --border: #e7c8a3;
+  --link: #2e1b0f;
+  --accent: #d97932;
+  --on-accent: #fff4e8;
+}
+
+:root[data-theme="teal"] {
+  --bg: #e8f8f8;
+  --fg: #0f2e2e;
+  --fg-muted: #346060;
+  --surface: #f5fcfc;
+  --border: #b7e0e0;
+  --link: #0f2e2e;
+  --accent: #2d9d9d;
+  --on-accent: #e8f8f8;
 }
 
 :root[data-theme="green"] {
@@ -165,10 +198,6 @@ h1 {
   align-items: center;
 }
 
-.nav-links li {
-  margin: 0;
-}
-
 .nav-links a {
   text-decoration: none;
   border-bottom: 1px dotted currentColor;
@@ -184,18 +213,6 @@ h1 {
   color: var(--on-accent);
   border-bottom: none;
   border-radius: var(--radius);
-}
-
-/* keep visible on visited/focused */
-.nav-links a.current-link:visited,
-.nav-links a[aria-current="page"]:visited,
-.nav-links li.current-link>a:visited,
-.nav-links a.current-link:focus-visible,
-.nav-links a[aria-current="page"]:focus-visible,
-.nav-links li.current-link>a:focus-visible {
-  background: var(--accent);
-  color: var(--on-accent);
-  outline: 2px solid transparent;
 }
 
 /* ===== LINKS / BUTTONS ===== */
@@ -230,7 +247,7 @@ a {
   box-shadow: 0 4px 10px rgba(0, 0, 0, .15);
 }
 
-/* subtle cup wiggle */
+/* Ko-fi wiggle */
 .kofi-cup {
   display: inline-block;
   animation: wiggle 6s infinite;
@@ -263,7 +280,10 @@ a {
   border-collapse: collapse;
   font-size: .9rem;
 }
-.work-section { padding-top: 2rem; }
+
+.work-section {
+  padding-top: 2rem;
+}
 
 .work th,
 .work td {
@@ -281,7 +301,9 @@ a {
   padding-right: 1rem;
 }
 
-.work .title { padding-right: 1rem; }
+.work .title {
+  padding-right: 1rem;
+}
 
 /* ===== BLOCKQUOTE ===== */
 blockquote {
@@ -373,7 +395,7 @@ cite {
   }
 }
 
-/* ===== CONTACT PAGE (scoped; uses same tokens) ===== */
+/* ===== CONTACT PAGE ===== */
 .page-contact {
   background: var(--bg);
 }
@@ -396,6 +418,7 @@ cite {
   color: var(--fg-muted);
 }
 
+/* contact links list */
 .contact-list {
   display: grid;
   gap: 14px;
@@ -427,6 +450,7 @@ cite {
   border-color: transparent;
 }
 
+/* ko-fi block */
 .kofi-wrap {
   padding: 2rem 1.25rem;
 }
@@ -446,4 +470,71 @@ cite {
 
 .mini-links a:hover {
   text-decoration: underline;
+}
+
+/* two-column contact layout */
+/* two-column wrapper for contact list + form */
+.page-contact .contact-row {
+  display: grid;
+  grid-template-columns: 1fr 2fr;  /* left: links, right: form */
+  gap: var(--gap);
+  margin: 2rem 0;
+  align-items: start;
+}
+
+/* left column layout */
+.page-contact .contact-row > .contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  max-width: 520px; /* keep it tidy; adjust if you want wider */
+}
+
+/* form look + typography */
+.page-contact .contact-form { 
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+.page-contact .contact-form form p { margin: 0.6rem 0; }
+.page-contact .contact-form input,
+.page-contact .contact-form textarea,
+.page-contact .contact-form select,
+.page-contact .contact-form button {
+  width: 100%;
+  font-family: inherit;
+  font-size: 1rem;
+  color: var(--fg);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.5rem 0.65rem;
+}
+.page-contact .contact-form input:focus,
+.page-contact .contact-form textarea:focus,
+.page-contact .contact-form select:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-color: var(--accent);
+}
+.page-contact .contact-form input::placeholder,
+.page-contact .contact-form textarea::placeholder {
+  color: var(--fg-muted);
+}
+.page-contact .contact-form button[type="submit"] {
+  background: var(--accent);
+  color: var(--on-accent);
+  border: 0;
+  cursor: pointer;
+  transition: transform .12s, background-color .18s, box-shadow .18s;
+}
+.page-contact .contact-form button[type="submit"]:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(0,0,0,.15);
+}
+
+/* mobile: stack */
+@media (max-width: 800px) {
+  .page-contact .contact-row { grid-template-columns: 1fr; }
 }

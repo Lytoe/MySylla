@@ -3,7 +3,7 @@ const btn = document.getElementById('theme-toggle');
 const root = document.documentElement;
 
 // Define available themes (must exist in styles.css)
-const themes = ["light", "dark", "blue", "green", "purple"];
+const themes = ["light", "dark", "blue", "green", "purple", "red", "orange", "teal", "gray"];
 
 // Load saved theme if valid
 const saved = localStorage.getItem('theme');
