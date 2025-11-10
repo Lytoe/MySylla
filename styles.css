@@ -510,6 +510,7 @@ cite {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 0.5rem 0.65rem;
+  
 }
 .page-contact .contact-form input:focus,
 .page-contact .contact-form textarea:focus,
