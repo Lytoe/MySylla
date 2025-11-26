@@ -1,44 +1,50 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Work — Nima</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Nima Taherkhani | Blog</title>
+  <meta name="description" content="Nima Taherkhani's blog – linguistics, code, daily ideas.">
+  <link rel="canonical" href="https://mysylla.netlify.app/blog.html">
   <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Lora:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script defer src="main.js"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
+
   <div class="site">
     <nav class="nav">
       <div class="title-row">
-        <p class="site-title serif">Nima Taherkhani</p>
+        <h1 class="site-title serif">Nima Taherkhani</h1>
         <button id="theme-toggle" class="button mono" aria-pressed="false">toggle theme</button>
       </div>
       <ul class="nav-links mono">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a class="current-link" aria-current="page" href="work.html">Work</a></li>
+        <li><a href="work.html">Work</a></li>
         <li><a href="contact.html">Contact</a></li>
         <li><a href="gallery.html">Through My Eyes</a></li>
         <li><a href="faq.html">FAQ</a></li>
-        <li><a href="blog.html">Blog</a></li>
+        <li><a href="blog.html" aria-current="page" class="current-link">Blog</a></li>
       </ul>
     </nav>
 
     <main id="main">
-      <section class="text work-section">
-        <h1 class="h1 work-title">Work</h1>
-        <table class="work" id="work-table">
-          <tbody><!-- main.js will inject rows from data/work.json --></tbody>
-        </table>
+      <section class="text">
+        <h2 class="h1">Blog Archive</h2>
+        <ul id="blog-list" class="list" style="padding-left:0;">
+          <!-- Blog posts will be injected by JS/ check it now -->
+        </ul>
       </section>
     </main>
 
     <footer class="footer">
       <ul class="nav-links mono">
         <li><a href="mailto:n.taherkhani1378@gmail.com">Email</a></li>
+        <li><a href="https://github.com/Lytoe" target="_blank" rel="noreferrer noopener">GitHub</a></li>
       </ul>
     </footer>
   </div>

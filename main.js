@@ -67,3 +67,61 @@ function escapeHtml(s) {
 }
 
 renderWork();
+
+const blogPosts = [
+  {
+    title: "Invisibility",
+    preview: "I am invisbible, and that's used to be no okay in my mind,...",
+    date: "2025-11-23",
+    tags: ["life", "loner", "solitude"],
+    href: "blog/solitude-sylla.html"
+  },
+  {
+    title: "Reasons that I better live alone",
+    preview: "well, at this point of my life, I've had experieces that led me to make this decesion",
+    date: "2025-11-10",
+    tags: ["life", "loner", "solitude"],
+    href: "blog/solitude-sylla.html"
+  },
+  {
+    title: "Univeristies after LLM era",
+    preview: "So, yeah… it’s 2025 and here I am, moved all the way to France just for the chance to sit in a..",
+    date: "2025-10-20",
+    tags: ["universities", "modern era"],
+    href: "blog/blog-role-discourse-markers.html"
+  },
+  {
+    title: "NLP and The Limits of Meaning",
+    preview: "How far can AI go in understanding context? Reflections from an NLP developer.",
+    date: "2025-09-14",
+    tags: ["NLP", "AI", "coding"],
+    href: "blog/blog-nlp-meaning.html"
+  }
+  
+
+];
+function renderBlogHub() {
+  const blogList = document.getElementById('blog-list');
+  if (blogList && blogPosts && blogPosts.length) {
+    blogPosts.forEach(post => {
+      const li = document.createElement('li');
+      li.style.listStyle = 'none';
+
+      li.innerHTML = `
+        <a class="link" href="${post.href}">
+          <strong>${escapeHtml(post.title)}</strong>
+        </a>
+        <p class="muted" style="margin:4px 0 0;font-size:.92rem;">
+          ${escapeHtml(post.preview)}<br>
+          <span>${escapeHtml(post.date)}</span>
+          ·
+          <span>${post.tags.map(t => `<span style="margin-right:6px">${escapeHtml(t)}</span>`).join('')}</span>
+        </p>
+      `;
+      blogList.appendChild(li);
+    });
+  }
+}
+
+// Call the function on page load (just like renderWork)
+renderBlogHub();
