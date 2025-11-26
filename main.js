@@ -70,17 +70,24 @@ renderWork();
 
 const blogPosts = [
   {
+    title: "LLMs = debts",
+    preview: "I do think I have lost a part of my brain that was...",
+    date: "25/11/2025",
+    tags: ["LLM", "debts", "wrong"],
+    href: "blog/LLMs-debt.html"
+  },
+  {
     title: "Invisibility",
     preview: "I am invisbible, and that's used to be no okay in my mind,...",
     date: "2025-11-23",
-    tags: ["life", "loner", "solitude"],
+    tags: ["life", "Nima", "solitude"],
     href: "blog/solitude-sylla.html"
   },
   {
     title: "Reasons that I better live alone",
     preview: "well, at this point of my life, I've had experieces that led me to make this decesion",
     date: "2025-11-10",
-    tags: ["life", "loner", "solitude"],
+    tags: ["life", "Me", "solitude"],
     href: "blog/solitude-sylla.html"
   },
   {
@@ -91,10 +98,10 @@ const blogPosts = [
     href: "blog/blog-role-discourse-markers.html"
   },
   {
-    title: "NLP and The Limits of Meaning",
-    preview: "How far can AI go in understanding context? Reflections from an NLP developer.",
+    title: "Computational linguistics, myth or goal?",
+    preview: "----",
     date: "2025-09-14",
-    tags: ["NLP", "AI", "coding"],
+    tags: ["NLP", "CL", "Linguistics"],
     href: "blog/blog-nlp-meaning.html"
   }
   
