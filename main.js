@@ -70,6 +70,13 @@ renderWork();
 
 const blogPosts = [
   {
+    title: "Errotic in my different opinion",
+    preview: "she is drowned  inside the ocean of papers and books with immensely focused and not even glimpsing away",
+    date: "2026-01-13",
+    tags: ["Errotic", "Wine", "fine"],
+    href: "blog/what-I-Respect.html"
+  },
+  {
     title: "LLMs = debts",
     preview: "I do think I have lost a part of my brain that was...",
     date: "25/11/2025",
@@ -104,6 +111,7 @@ const blogPosts = [
     tags: ["NLP", "CL", "Linguistics"],
     href: "blog/blog-nlp-meaning.html"
   }
+  
   
 
 ];
