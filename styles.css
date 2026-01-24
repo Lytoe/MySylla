@@ -551,3 +551,26 @@ cite {
 @media (max-width: 800px) {
   .page-contact .contact-row { grid-template-columns: 1fr; }
 }
+/* ===== UTILITIES ===== */
+.fa {
+  font-family: 'Vazirmatn', sans-serif;
+  direction: rtl;
+  /* Persian looks smaller than English; slight boost for optical balance */
+  font-size: 1.1em; 
+  line-height: 1.8;
+  /* Optional: removes the 'mono' feel to make it flow better */
+  font-style: normal; 
+}
+/* ===== NASTALIQ UTILITY ===== */
+.nastaliq {
+  font-family: 'Gulzar', serif; /* Fallback to serif if load fails */
+  direction: rtl;
+  font-size: 1.6rem; /* Nastaliq is illegible if small. Must be > 20px */
+  line-height: 2.2;  /* Essential: Prevents lines from overlapping */
+  padding: 0.5rem 0; /* Extra breather space for tall letters like 'Alef' */
+  color: var(--fg);
+  font-weight: 400;
+  
+  /* Optional: visual balance adjustment */
+  transform-origin: right center; 
+}
