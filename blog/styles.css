@@ -1,0 +1,144 @@
+/* Base Variables & Theming */
+:root {
+  --bg-color: #fcfcfc;
+  --text-color: #1a1a1a;
+  --muted-color: #666666;
+  --link-color: #000000;
+  --link-hover: #555555;
+  --font-serif: 'Lora', serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+}
+
+/* Dark mode class (toggled via JS) */
+body.dark {
+  --bg-color: #121212;
+  --text-color: #e0e0e0;
+  --muted-color: #a0a0a0;
+  --link-color: #ffffff;
+  --link-hover: #aaaaaa;
+}
+
+/* Reset & Base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-serif);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  font-size: 18px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Typography Utilities */
+.serif { font-family: var(--font-serif); }
+.mono { font-family: var(--font-mono); }
+.h1 { font-size: 2rem; margin-bottom: 0.5rem; line-height: 1.2; }
+.muted { color: var(--muted-color); }
+
+a {
+  color: var(--link-color);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+a:hover {
+  color: var(--link-hover);
+}
+
+/* Layout */
+.site {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Navigation */
+.nav {
+  margin-bottom: 3rem;
+}
+
+.title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.site-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.9rem;
+}
+
+/* Main Content */
+main {
+  flex: 1;
+}
+
+.text {
+  max-width: 650px;
+}
+
+.text p {
+  margin-bottom: 1.25rem;
+}
+
+/* Buttons */
+.button {
+  background: none;
+  border: 1px solid var(--text-color);
+  color: var(--text-color);
+  padding: 0.25rem 0.75rem;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.button:hover {
+  opacity: 0.7;
+}
+
+.back-btn {
+  margin-bottom: 2rem;
+  display: inline-block;
+}
+
+/* Footer */
+.footer {
+  margin-top: 4rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--muted-color);
+}
+
+/* Accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--text-color);
+  color: var(--bg-color);
+  padding: 8px;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
+}
